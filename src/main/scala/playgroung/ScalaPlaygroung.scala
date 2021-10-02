@@ -1,5 +1,9 @@
 package playgroung
 
-class ScalaPlaygroung {
+object ScalaPlaygroung extends App {
+
+  println("HELLO SCALA!");
+
+
 
 }
