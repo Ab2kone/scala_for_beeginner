@@ -19,7 +19,7 @@ object ValueVariableType extends App {
    * le compilateur scala peut reconnaitre et affecter
    * le type à une variable selon la valeur
    */
-  val anotherStrin = "boodbaye"
+  val anotherStrin = "boodbye"
 
 
   val aBoolean: Boolean = false
