@@ -1,0 +1,5 @@
+package playgroung
+
+class ScalaPlaygroung {
+
+}
