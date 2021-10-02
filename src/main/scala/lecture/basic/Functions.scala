@@ -61,7 +61,7 @@ object Functions extends App {
    * @return
    */
   def factorial(n: Int): Int = {
-    if (n <= 1) 1
+    if (n <= 0) 1
     else n * factorial(n-1)
   }
   println("result of Factorial: " + factorial(5))
