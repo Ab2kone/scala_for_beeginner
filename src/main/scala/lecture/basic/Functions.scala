@@ -76,6 +76,7 @@ object Functions extends App {
     if (n <= 1) 1
     else fibonacci(n - 1) + fibonacci(n - 2)
   }
+
   println("result of Fibonacci of 8 is: " + fibonacci(8))
 
 
