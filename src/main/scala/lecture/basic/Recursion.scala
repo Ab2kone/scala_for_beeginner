@@ -37,6 +37,8 @@ object Recursion extends App {
 
   println(concatenateTailrec("Hello ", 3, ""))
 
+
+
   def isPrime(n: Int): Boolean = {
     def isPrimeTailrec(t: Int, isStillPrime: Boolean): Boolean = {
       if (!isStillPrime) false
@@ -48,6 +50,8 @@ object Recursion extends App {
   }
   println(isPrime(2003))
   println(isPrime(629))
+
+
 
   def fibunacci(n: Int): Int = {
     def fiboTailrec(i: Int, last: Int, nextLast: Int): Int = {
