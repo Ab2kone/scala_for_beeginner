@@ -11,16 +11,26 @@ import scala.language.postfixOps
 object Methodotation extends App {
 
 
-  class Person(val name: String, favoriteMovie: String){
+  class Person(val name: String, favoriteMovie: String, val age: Int = 0){
     def likes(movies: String): Boolean = movies == favoriteMovie
 
-    def HangOutWith(person: Person): String = s"${this.name} is hanging out with ${person.name}"
+    def +(person: Person): String = s"${this.name} is hanging out with ${person.name}"
+    def +(nickname: String): Person = new Person(s"$name ($nickname)", favoriteMovie)
+
+//    def HangOutWith(person: Person): String = s"${this.name} is hanging out with ${person.name}"
 
     def unary_! : String = s"$name, what the check?"
+
+    def unary_+ : Person = new Person(name, favoriteMovie, age + 1)
 
     def islive : Boolean = true
 
     def apply(): String = s"Hi my name is $name and i like $favoriteMovie"
+
+    def apply(n: Int): String = s"$name wathed $favoriteMovie $n times"
+
+    def learns(thing: String) = s"$name is learning $thing"
+    def learnsScala = this learns "Scala"
 
   }
 
@@ -32,7 +42,7 @@ object Methodotation extends App {
 
   //Operator in scala
   val tom = new Person("Tom", "Figth club")
-  println(mary HangOutWith tom)
+//  println(mary HangOutWith tom)
 
 
   println(1 + 2)
@@ -57,4 +67,31 @@ object Methodotation extends App {
   // apply
   println(mary.apply())
   println(mary())
+
+  /**
+   * Exerccice
+   *
+   * 1. Overload the + operator
+   *  mary + "the rockstar" => new person "Mary (the rockstart)"
+   *
+   *  2. Add an age to the person class
+   *  Add a unary + operator => new person with the age + 1
+   *  +mary => mary with the age incrementer
+   *
+   *  3. Add a "learns" method in the Person class => "Mary learns Scala"
+   *  Add a learnsScala method, calls  learns method with scala"
+   *  Use it in postfix notation
+   *
+   *  4. Overload the apply method
+   *  mary.apply(2) "mary watched Inception 2 times
+   */
+
+  println((mary + "the rockstar ").apply())
+  println((+mary).age)
+  println(mary learnsScala)
+  println(mary(10))
+
+
+
+
 }
