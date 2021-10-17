@@ -4,7 +4,7 @@ package lecture.oop
  * @project scala_for_beginner
  * @created by aboubakar on 17/10/2021
  */
-object InheritanceAndTraits  extends App {
+object Inheritance  extends App {
   // single class inheritance
   sealed class Animal {
     val creatureType = "wild"
